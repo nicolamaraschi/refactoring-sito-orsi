@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Orsi S.L.R website</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/logo orsi.ico">
+      
+        <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+       
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+
+        <!-- Importa jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      
+        <!-- Importa Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js" integrity="sha512-6zG8i4fMeeQDf9K1KULR9f2K0mN6ZnY7oU8RiW0Ks5v6GwZQJDP2nK9c4xN/x3qJYjKkM6J6vDqyW5Gz5z6pWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
+        <!-- Importa Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+      
+        <!--LIBRERIE PER GRAFICI -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        
+   </head>
+   <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand ml-0 custom-navbar-brand" href="#">
+                <img src="images/logov2.png" alt="logo orsi" class="logo-img">
+                <img src="images/nome orsi.png" alt="logo orsi" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto nav-items">
+                    
+                    <li class="nav-item">
+                        <a data-translation="home" id="section0-link" class="nav-link" href="#section0">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="chiSiamo" class="nav-link" href="#section1">CHI SIAMO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="ricerca" class="nav-link" href="#section2">RICERCA & INNOVAZIONE TECNOLOGICA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="nostriMarchi"class="nav-link" href="#section3">NOSTRI MARCHI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="Produzione"class="nav-link" href="#section4">PRODUZIONE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="novita" class="nav-link" href="#section5">NOVITA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="certificazioni"class="nav-link" href="#section6">CERTIFICAZIONI</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a data-translation="prodotti"class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                            PRODOTTI
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a data-translation="bucatoProfessionale" class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownBucatoProfessionale" role="button" data-toggle="dropdown">
+                                Bucato Professionale
+                            </a>
+                            <div class="dropdown-menu sub-menu" aria-labelledby="navbarDropdownBucatoProfessionale">
+                                <a class="dropdown-item" href="prodottiBit.html">BIT</a>
+                                <a class="dropdown-item" href="prodottiDolomitenWeiss.html">Dolomiten Weiss</a>
+                                <a class="dropdown-item" href="prodottiDolomitenWeissBiologico.html">Dolomiten Weiss Biologico</a>
+                                <a class="dropdown-item" href="prodottiTresil.html">Tresil</a>
+                            </div>
+                            <a data-translation="bucatoDomestico" class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownBucatoDomestico" role="button" data-toggle="dropdown">
+                                Bucato Domestico
+                            </a>
+                            <div class="dropdown-menu sub-menu" aria-labelledby="navbarDropdownBucatoDomestico">
+                                <a class="dropdown-item" href="prodottiSuora.html">La Suora</a>
+                                <a class="dropdown-item" href="prodottiOrsetto.html">Orsetto</a>
+                                <a class="dropdown-item" href="prodottiOrsettoBiologico.html">Orsetto Biologico</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ricercaSchedaTecnica.html">REGULATORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translation="contatti" class="nav-link" href="contatti.html">CONTATTI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="setLanguage('it')">
+                            <img src="loghi/italy.ico" alt="Icona Bandiera" class="icona-bandiera">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="setLanguage('en')">
+                            <img src="loghi/United-Kingdom-flag-icon.png" alt="Icona Bandiera" class="icona-bandiera">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="setLanguage('fr')">
+                            <img src="images/france-flag-icon.png" alt="Icona Bandiera Francia" class="icona-bandiera">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="setLanguage('de')">
+                            <img src="images/germany-flag-icon.png" alt="Icona Bandiera Germania" class="icona-bandiera">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Bootstrap doesn't support submenu out of the box. So we need to make it work using this JS
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+            }
+            var $subMenu = $(this).next('.dropdown-menu');
+            $subMenu.toggleClass('show');
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+                $('.dropdown-submenu .show').removeClass('show');
+            });
+            return false;
+        });
+    </script>
+ 
+    
+      
+      
+     
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+  <script src="translation.js"></script>
+
+    <script>
+const savedLanguage = localStorage.getItem('language'); 
+
+if (savedLanguage) {
+  setLanguage(savedLanguage);
+}
+
+window.addEventListener('load', function() {
+  setLanguage(localStorage.getItem('language')); 
+});
+
+    </script>
+    
+<!-- FINE NAVBAR -->
+
+<!-- FRECCINA ANCORA CHE PORTA SU -->
+<a href="#section0" id="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+<!-- SCRIPT PER FRECCINA -->
+  <script>
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 200) {
+        scrollToTopButton.style.display = 'block';
+      } else {
+        scrollToTopButton.style.display = 'none';
+      }
+    });
+  
+    scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+    
+
+
+
+
+
+<p id="section0" style="position: relative; top: -100px;"></p>
+  <a  name="section0"></a> <!-- Questa riga è importante -->
+  <div class="parallax-section">
+    <div class="parallax-text">
+      <h1>ORSI S.L.R.</h1>
+      <p data-translation="presentazione">Industria Chimica Orsi</p>
+    </div>
+    <div class="parallax-image">
+      <!-- Inserisci qui il tuo tag di immagine -->
+    </div>
+  </div>
+
+  
+<!--
+  <canvas id="myChart" width="200" height="100"></canvas>
+    <h1>Innalzamento dei Progetti e delle Idee</h1>
+   
+    <canvas id="myChart" width="200" height="100"></canvas>
+
+    <script>
+        // Dati di esempio per rappresentare l'innalzamento dei progetti e delle idee nel tempo
+        const data = {
+            labels: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio"],
+            datasets: [
+                {
+                    label: "Progetti",
+                    data: [10, 15, 25, 30, 40],
+                    borderColor: "rgba(75, 192, 192, 1)",
+                    borderWidth: 2,
+                    fill: false,
+                },
+                {
+                    label: "Idee",
+                    data: [5, 10, 15, 20, 25],
+                    borderColor: "rgba(255, 99, 132, 1)",
+                    borderWidth: 2,
+                    fill: false,
+                },
+            ],
+        };
+
+        // Opzioni del grafico
+        const options = {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+        };
+
+        // Ottieni il riferimento al canvas e crea il grafico
+        const ctx = document.getElementById("myChart").getContext("2d");
+        const myChart = new Chart(ctx, {
+            type: "line",
+            data: data,
+            options: options,
+        });
+    </script>
+
+-->
+
+
+<p id="section1" style="position: relative; top: -100px;"></p>
+<div  class="our-menu-food">
+    <h2 data-translation="chiSiamo2" style="color: white; text-align: center;">CHI SIAMO</h2>
+    <p data-translation="chiSiamo3" class="ecologia-text">Nata a Bologna nel 1907<br>
+        ORSI è una delle poche realtà italiane di rilievo nel mercato della detergenza in polvere domestica ed istituzionale<br>
+        Competendo per esperienza, tecnologia e qualità con le aziende leader del settore.<br>
+        Oggi, ORSI investe in Ricerca e Sviluppo per innovare nel campo della detergenza e della cosmesi.</p>    
+   
+    <h3 data-translation="chiSiamo4"style="color: white; text-align: center;">Con l’impegno che</h2>
+    <div class="main-menu-food">
+        <div class="inner-menu-food">
+            <div class="menu-food-content">
+                <img src="images/responsabile.svg" alt="">
+                <div class="menu-food-text">
+                    <h3 data-translation="titoloSostenibile1">Innovazione Responsabile</h3>
+                    <p data-translation="descrizioneSostenibile1" class="description">L'innovazione responsabile è la chiave per un progresso sostenibile e duraturo.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="inner-menu-food">
+            <div class="menu-food-content">
+                <img src="images/menu2.png" alt="">
+                <div class="menu-food-text">
+                    <h3 data-translation="titoloSostenibile2">Approvigionamento Etico</h3>
+                    <p data-translation="descrizioneSostenibile2"class="description" >Scegliere un approvvigionamento etico è una scelta responsabile per un futuro sostenibile.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="inner-menu-food">
+            <div class="menu-food-content">
+                <img src="images/world-environment.png" alt="">
+                <div class="menu-food-text">
+                    <h3 data-translation="titoloSostenibile3">Proteggere il nostro ambiente</h3>
+                    <p data-translation="descrizioneSostenibile3" class="description">Proteggere l'ambiente è proteggere il nostro futuro.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Quarta immagine -->
+        <div class="inner-menu-food">
+            <div class="menu-food-content">
+                <img src="images/prendersi cura.webp" alt="">
+                <div class="menu-food-text">
+                    <h3 data-translation="titoloSostenibile4">Prendersi cura delle persone</h3>
+                    <p  data-translation="descrizioneSostenibile4"id="section2" class="description">Cura dedicata al benessere di tutti.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        // Rileva lo scorrimento della pagina
+        window.addEventListener("scroll", function() {
+            const innovationSection = document.querySelector(".innovation-section");
+            const cardList = document.querySelector(".card-list");
+    
+            // Verifica se la sezione è visibile nell'area visibile del viewport
+            const isSectionVisible = innovationSection.getBoundingClientRect().top < window.innerHeight;
+    
+            if (isSectionVisible) {
+                // Rimuovi la classe "hidden" per mostrare le card gradualmente
+                const cards = cardList.querySelectorAll(".card");
+                cards.forEach(function(card) {
+                    card.style.opacity = 1;
+                    card.style.transform = "translateY(0)";
+                });
+    
+                // Applica la transizione alle immagini
+                const images = cardList.querySelectorAll(".card img");
+                images.forEach(function(img) {
+                    img.style.transition = "opacity 0.5s ease";
+                    img.style.opacity = 1;
+                });
+    
+                // Rimuovi l'ascoltatore di eventi per evitare che l'animazione si ripeta
+                window.removeEventListener("scroll", arguments.callee);
+            }
+        });
+    
+    
+    </script>
+
+<p id="section2" style="position: relative; top: -100px;"></p>   
+<div  class="innovation-section">
+    <h2 data-translation="ricerca2">RICERCA & INNOVAZIONE TECNOLOGIA</h2>
+    <p data-translation="ricerca3" style="text-align: center;">Il Nostro Team dedicato di Esperti in Ricerca e Sviluppo sono quotidianamente impegnati nella progettazione e industrializzazione di prodotti innovativi ad elevato contenuto tecnologico e di processi produttivi sempre più sostenibili per l’ambiente e le persone. Mettiamo l’accento sull’interdisciplinarietà, collaborando con Partner esterni e Università per garantire che le nostre soluzioni siano allineate alle più recenti scoperte scientifiche e tecnologiche.</p>
+    
+    <h3 data-translation="ricerca4"> LE NOSTRI TECNOLOGIE</h3>
+    <ul class="card-list container">
+        <li class="card">
+            <div class="card-content">
+                <h4 data-translation="ricerca5">Polveri e Granuli Difficili</h4>
+                <p data-translation="ricerca6">Per Purificazione delle acque<br>
+                    Per Edilizia<br>
+                    Per Detergenza auto<br>
+                    Per Detergenza pellami</p>
+                    
+                <img src="images/t1v2.png" alt="Immagine 1">
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-content">
+                <h4 data-translation="ricerca7">Cristalli super profumati idrosolubili </h4>
+                <p data-translation="ricerca8">Per Lavatrice<br>
+                    Per Asciugatrice<br>
+                    Per Aspirapolvere<br>
+                    Per Deodorazione cassetti armadi</p>                    
+                <img src="images/t2v2.png" alt="Immagine 2">
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-content">
+                <h4 data-translation="ricerca9">Polvere Monodose idrosolubile</h4>
+                <p data-translation="ricerca10">Per Schiumogeno WC con probiotici <br>
+                    Per Detergenti <br>
+                    Per Pavimenti <br>
+                    Per Ammorbidente Superprofumato<br>
+                    Per Profumi in polveri</p>                    
+                <img src="images/t3.png" alt="Immagine 3">
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-content">
+                <h4 data-translation="ricerca11">Solidi Monodose Detergenza e Cosmesi</h4>
+                <p data-translation="ricerca12"> Foglietti Lavatrice<br>
+                    Pastiglie Ammorbidente Superprofumato<br>
+                    Pastiglie Lavastoviglie </p>                    
+                <img src="images/t4.png" alt="Immagine 4">
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-content">
+                <h4 data-translation="ricerca13">IDRO PODS monodose in polvere </h4>
+                <p data-translation="ricerca14"> Lavatrice<br>
+                    Lavaggio Piatti a mano<br>
+                    Pavimenti<br>
+                    </p>  
+                <img src="images/t5.png" alt="Immagine 5">
+            </div>
+        </li>
+    </ul>
+    
+</div >
+
+
+
+
+
+
+
+
+
+   
+
+<p id="section3" style="position: relative; top: -100px;"></p>   
+<p style="position: relative; top: -100px;"></p>
+<div  class="carousel-container2 mb-4">
+    <h2 data-translation="brands2" class="carousel-title" style="color: white;">I Nostri Brands</h2>
+    <div class="carousel2">
+        <div class="slide"><img src="images/brand1.png" alt="Image 1"></div>
+        <div class="slide"><img src="images/brand2.png" alt="Image 2"></div>
+        <div class="slide"><img src="images/brand3.png" alt="Image 3"></div>
+        <div class="slide"><img src="images/brand4.png" alt="Image 4"></div>
+    </div>
+    <button class="prev-button" onclick="prevSlide()">←</button>
+    <button  class="next-button" onclick="nextSlide()">→</button>
+</div>
+
+
+<script>
+    const carousel = document.querySelector('.carousel2');
+    const slides = carousel.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        const translateX = -currentIndex * 25; /* 25% per ogni slide */
+        carousel.style.transform = `translateX(${translateX}%)`;
+    }
+
+    setInterval(nextSlide, 5000); // Cambia slide ogni 5 secondi
+</script>
+
+
+<p id="section4" style="position: relative; top: -100px;"></p>  
+<div  class="enjoy-our-food">
+
+    <div class="food-main-content">
+        <h2 data-translation="titoloProduzione" style="color: white; text-align: center;">PRODUZIONE</h2>
+        <p data-translation="descrizioneProduzione"> Lo stabilimento produttivo in Italia ha la capacità di
+            4 ton/ora con linee di confezionamento e pallettizzazione
+            automatiche e robotizzate.
+            Ogni fase della lavorazione è seguita attraverso
+            sistematiche analisi chimiche finalizzate ad un continuo
+            controllo delle performance produttive e allo sviluppo dei
+            processi produttivi. </p>
+    </div>
+
+</div>
+
+
+
+
+<p id="section5"  style="position: relative; top: -100px;"></p>  
+<!-- NOVITA -->
+<div  class="about2">
+      <div class="about-content2">
+        <div class="about-inner-content home-image">
+          <img class="myimageabout" src="images/grafico.png" alt="">
+        </div>
+      </div>
+  
+      <div   class="about-content">
+        <div class="about-inner-content">
+          <div class="about-text-content">
+            <h2  data-translation="titoloNovita" >Novità</h2>
+            <p data-translation="descrizioneNovita1">ORSI group e il suo Team È lieto di comunicare l’inizio dell’operatività della divisione Cosmetica Orsi.
+              Locata nei pressi della nostra attuale sede comprende:
+              Un’area dedicata di 6.000 M2 di cui 1.500 M2 coperti
+              La creazione di un sito produttivo per la cosmesi e un laboratorio di analisi e ricerca e sviluppo dedicato.
+              La gestione è affidata ad uno staff di tecnici e ricercatori cosmetologi oggi pronti al debutto</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+  <p id="section6" style="position: relative; top: -100px;"></p>
+<h2 data-translation="certificazioni2" class="titolo-partner">CERTIFICAZIONI</h2>
+<div id="carouselExampleIndicators" class="carousel slide mb-4" data-ride="carousel" data-interval="3000">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+                <img src="images/bureau veritas.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+                <img src="images/certificato biologico.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+<div class="our-clients", class="our-menu-food">
+    <h1 data-translation="partner" style="font-size: 2em; padding-top: 2%"></p>
+        >I NOSTRI PARTNERSHIP</h1>
+    <ul class="client-logos">
+        <li> <img src="loghi/logo1.jpeg" alt=""> <img src="loghi/logo1.jpeg" alt=""> </li>
+        <li> <img src="loghi/logo2.jpg" alt=""> <img src="loghi/logo2.jpg" alt=""> </li>
+        <li> <img src="loghi/logo3.jpg" alt=""> <img src="loghi/logo3.jpg" alt=""> </li>
+        <li> <img src="loghi/logo4.png" alt=""> <img src="loghi/logo4.png" alt=""> </li>
+        <li> <img src="loghi/logo5.png" alt=""> <img src="loghi/logo5.png" alt=""> </li>
+        <li> <img src="loghi/logo6.jpeg" alt=""> <img src="loghi/logo6.jpeg" alt=""> </li>
+       <!-- <li> <img src="loghi/logo7.jpeg" alt=""> <img src="loghi/logo7.jpeg" alt=""> </li> -->
+        <li> <img src="loghi/logo8.png" alt=""> <img src="loghi/logo8.png" alt=""> </li>
+        <li> <img src="loghi/logo9.jpeg" alt=""> <img src="loghi/logo9.jpeg" alt=""> </li>
+        <li> <img src="loghi/logo10.png" alt=""> <img src="loghi/logo10.png" alt=""> </li>
+        <li> <img src="loghi/logo11.jpeg" alt=""> <img src="loghi/logo11.jpeg" alt=""> </li>
+        <li> <img src="loghi/logo12.jpeg" alt=""> <img src="loghi/logo12.jpeg" alt=""> </li>
+        <li> <img src="loghi/logo13.jpg" alt=""> <img src="loghi/logo13.jpg" alt=""> </li>
+        <li> <img src="loghi/logo14.jpg" alt=""> <img src="loghi/logo14.jpg" alt=""> </li>
+        <li> <img src="loghi/logo15.png" alt=""> <img src="loghi/logo15.png" alt=""> </li>
+        <li> <img src="loghi/logo16.png" alt=""> <img src="loghi/logo16.png" alt=""> </li>
+        <li> <img src="loghi/logo17.jpg" alt=""> <img src="loghi/logo17.jpg" alt=""> </li>
+    </ul>
+</div>
+<script>
+    // Funzione per animare l'apparizione delle immagini
+    function animateImages() {
+        const logoItems = document.querySelectorAll(".client-logos li");
+        let delay = 0;
+
+        logoItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.opacity = 1;
+                item.style.transform = "translateY(0)";
+            }, delay);
+            delay += 200; // Ritardo di 200ms tra le immagini (puoi personalizzare questo valore)
+        });
+    }
+
+    // Funzione per controllare quando l'utente scorre verso la sezione delle immagini
+    function checkScroll() {
+        const section = document.querySelector(".our-clients");
+        const windowHeight = window.innerHeight;
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < windowHeight) {
+            // L'utente è nella sezione delle immagini, quindi avvia l'animazione
+            animateImages();
+            // Rimuovi l'evento scroll per evitare di riattivare l'animazione
+            window.removeEventListener("scroll", checkScroll);
+        }
+    }
+
+    // Aggiungi un gestore di eventi per l'evento di scroll
+    window.addEventListener("scroll", checkScroll);
+</script>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4><i class="fas fa-phone"></i> Telefono</h4>
+                <ul>
+                    <li><a href="#">+39 051 6671000</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><i class="far fa-envelope"></i> Email</h4>
+                <ul>
+                    <li><a href="#">info@orsidetersivi.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><i class="far fa-envelope"></i> PEC</h4>
+                <ul>
+                    <li><a href="#">orsidetersivi@pec.it</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><i class="fas fa-id-card"></i> C.F.</h4>
+                <ul>
+                    <li><a href="#">Registro Imprese Bologna n° 226650/1996 BO - P.IVA IT 00829301209 - REA BO 367676 - Cod Fiscale 01995970363</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4><i class="fab fa-facebook-f"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-linkedin-in"></i> Social</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- scroll reveal javascript link -->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- javascript link here -->
+
+<script src="script.js"></script>
+
+
+
+
+   </body>
+</html>

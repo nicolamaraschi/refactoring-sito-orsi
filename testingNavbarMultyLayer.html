@@ -1,0 +1,133 @@
+<style>
+    /* Rimuovi il background-color dal container-stats e imposta un padding generale */
+.container-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Stile per le statistiche */
+.stat {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff; /* Sfondo bianco */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px; /* Aggiunto bordo arrotondato */
+  transition: transform 0.3s ease; /* Aggiunto effetto di trasformazione */
+  cursor: pointer; /* Cambia il cursore quando ci passi sopra */
+}
+
+/* Stile per il titolo delle statistiche */
+.stat h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Stile per il valore delle statistiche */
+.stat p {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Aggiunto stile per la transizione al passaggio del mouse */
+.stat:hover {
+  transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Effetto di ombreggiatura più evidente */
+}
+
+/* Aggiunto stile per rendere responsive le statistiche su schermi più piccoli */
+@media (max-width: 768px) {
+  .container-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 20px;
+    max-width: none;
+    width: 80%;
+  }
+}
+
+</style>
+
+
+
+<div id="container-stats" class="container-stats">
+    <div class="stat">
+        <h2>Personale</h2>
+        <p data-count="15">0</p>
+    </div>
+    <div class="stat">
+        <h2>Dimensione Azienda m2</h2>
+        <p data-count="12000">0</p>
+    </div>
+    <div class="stat">
+        <h2>Clienti</h2>
+        <p data-count="50">0</p>
+    </div>
+    <div class="stat">
+        <h2>Tecnologie</h2>
+        <p data-count="10">0</p>
+    </div>
+</div>
+<script>
+    function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            element.innerHTML = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+        requestAnimationFrame(step);
+    }
+
+    const stats = document.querySelectorAll("#container-stats .stat p");
+    stats.forEach((stat) => {
+        const startValue = parseInt(stat.textContent, 10);
+        const endValue = parseInt(stat.getAttribute("data-count"), 10);
+        const duration = 5000; // 5000 millisecondi (5 secondi) di durata dell'animazione
+        animateValue(stat, startValue, endValue, duration);
+    });
+</script>
+
+<body>
+    <section class="parallax-container">
+        <div class="parallax-content">
+            <h1>Effetto Parallax</h1>
+            <p>Questo è un esempio di un container con effetto parallax.</p>
+        </div>
+    </section>
+</body>
+
+<style>
+    /* styles.css */
+
+/* Stile per il container con effetto parallax */
+.parallax-container {
+    background-image: url('parallax-background.jpg'); /* Immagine di sfondo */
+    background-attachment: fixed; /* Imposta l'immagine di sfondo come fissata */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; /* Colore del testo all'interno del container */
+    text-align: center;
+    padding: 100px 0; /* Aggiungi spazio sopra e sotto al container */
+}
+
+/* Stile per il contenuto all'interno del container */
+.parallax-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Aggiungi altri stili CSS secondo le tue esigenze */
+
+</style>
+
